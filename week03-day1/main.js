@@ -28,3 +28,42 @@ console.log(parseInt(3.13121));
 console.log(parseInt('3.13121'));
 
 console.log(parseFloat('as'));
+
+
+var moneyInPocket = 20;
+prompt('whats your nuer') == 20;
+if (moneyInPocket > 10){
+  console.log('another drink I beg!');
+} else{
+  console.log(' my g, have another');
+}
+
+var countryOfOrigin = 'Kenya';
+var greeting = '';
+
+switch(countryOfOrigin) {
+  case 'France':
+    greeting = 'Bonjour';
+    break;
+  case 'Spain':
+    greeting = '¡Hola!';
+    break;
+  case 'Indonesia':
+    greeting = 'Selamat sore';
+    break;
+  case 'Kenya':
+    greeting = 'Jambo!';
+    break;
+  default:
+    greeting = 'Well hello there';
+    break;
+}
+console.log(greeting);
+
+var dayOfWeek = 'Thursday';
+// logical AND
+if (dayOfWeek.toUpperCase() === 'THURSDAY' || dayOfWeek.toUpperCase() === 'FRIDAY') {
+  console.log('Pub thisarvo!');
+} else {
+  console.log('Bummer :-(');
+}
