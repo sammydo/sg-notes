@@ -31,7 +31,6 @@ console.log(parseFloat('as'));
 
 
 var moneyInPocket = 20;
-prompt('whats your nuer') == 20;
 if (moneyInPocket > 10){
   console.log('another drink I beg!');
 } else{
@@ -66,4 +65,31 @@ if (dayOfWeek.toUpperCase() === 'THURSDAY' || dayOfWeek.toUpperCase() === 'FRIDA
   console.log('Pub thisarvo!');
 } else {
   console.log('Bummer :-(');
+}
+
+console.log('--- truthy/falsey:');
+var truthyThings = [1, 0, 'something', '', -1, [], null, undefined, NaN, 'false', '0'];
+
+// i is short for index
+// for loop below will search/increment through the index of the arra
+for(var i = 0; i < truthyThings.length; i++){
+
+  console.log(' element', i, 'is', truthyThings[i]);
+
+if(truthyThings[i]){
+
+  console.log('---->true');
+} else{
+  console.log('---->false');
+}
+}
+
+var yourName = prompt('what is your name');
+
+if (yourName){
+
+  alert('nice one, ', + yourName);
+} else{
+
+  alert('Not sure what you name is my g')
 }
