@@ -24,7 +24,7 @@ var person3 = {
 
 // adding these objects in an array
 var people = [ person1, person2, person3 ];
-var test = 1;
+
 
 // i (index of array is less than the number of elements within the array, increment through)
 for (i =0; i < people.length; i++){
@@ -47,31 +47,78 @@ if({} === {}){
   //---------------------------------
 
   //-------------------------------------------------
-
-function createPerson(firstNameParam, lastNameParam, emailParam, ageParam){
+var capitalCity = 'London';
+function createPerson(firstName, lastName, email, age){
   var newPerson = {
 
-    firstName: firstNameParam,
-    lastName: lastNameParam,
-    email: emailParam,
-    age: ageParam
+    firstName: firstName,
+    lastName: lastName,
+    email: email,
+    age: age,
+    capitalCity: capitalCity,
+    fullName: function() {
+      return firstName + ' ' + lastName + ' from ' + capitalCity;
+    }
 
   };
 return newPerson;
 }
 
- var person = createPerson('Harald', 'yolo', 'some@me.com', '21');
-console.log('newPerson:', person);
+var harald = createPerson('Harald', 'Kumar', 'some@me.com', '15');
+console.log('newPerson:', harald.fullName());
+var matt = createPerson('Matt', 'Robinson', 'someone@23.com', '35');
+var Sam = createPerson('Sam', 'Udoh', 'sasasasomeone@23.com', '21');
 
+//below pushes variable into array
+people = [];
+people.push(harald, matt, Sam);
 
 function isOldEnough(age){
 
   return(age >= 18);
 }
 
-if (isOldEnough(17)){
-  console.log('come in');
-} else{
 
-  console.log('come back whe you are older.');
+// if (isOldEnough(harald.age)){
+//   console.log('come in');
+// } else{
+//
+//   console.log('come back whe you are older.');
+// }
+
+
+var oldEnoughComments;
+for (i = 0; i < people.length ; i++) {
+  oldEnoughComments = (isOldEnough(people[i].age))
+? 'is old enough'
+: 'is not old enough '
+  console.log(people[i].fullName(), oldEnoughComments);
 }
+
+console.log('-------00 JAVASCRIPT:');
+
+var PI = 3.14;
+function Circle(radius){
+  this.radius = radius;
+  this.circumference = function () {
+    return 2 * Circle.PI * this.radius;
+  };
+}
+
+  Circle.PI =22/7;
+
+  Circle.prototype.area = function () {
+
+    return Circle.PI * this.radius * this.radius;
+  }
+
+
+
+var coin = new Circle(1.2);
+var plate = new Circle(7);
+var circles = [coin, plate]
+// classes begin with capital letters
+
+console.log('Radius is:', coin.radius);
+console.log('Cirumference is:', coin.circumference());
+console.log('Area is:', coin.area());
