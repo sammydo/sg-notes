@@ -41,3 +41,37 @@ if({} === {}){
   else{
     console.log('not working');
   }
+
+  ////functionsssssssssssssss
+
+  //---------------------------------
+
+  //-------------------------------------------------
+
+function createPerson(firstNameParam, lastNameParam, emailParam, ageParam){
+  var newPerson = {
+
+    firstName: firstNameParam,
+    lastName: lastNameParam,
+    email: emailParam,
+    age: ageParam
+
+  };
+return newPerson;
+}
+
+ var person = createPerson('Harald', 'yolo', 'some@me.com', '21');
+console.log('newPerson:', person);
+
+
+function isOldEnough(age){
+
+  return(age >= 18);
+}
+
+if (isOldEnough(17)){
+  console.log('come in');
+} else{
+
+  console.log('come back whe you are older.');
+}
